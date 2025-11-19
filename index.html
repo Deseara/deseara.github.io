@@ -22,8 +22,6 @@
         </svg>
     </button>
     
-    <!-- Кнопка мини-игры -->
-    <button class="game-toggle" id="gameToggle" title="Играть в Snake">🎮</button>
     <!-- Экран загрузки -->
     <div class="loader-wrapper" id="loader">
         <div class="loader">
@@ -39,12 +37,20 @@
             <!-- Аватарка -->
             <div class="avatar-container">
                 <img src="avatar.jpg" alt="Avatar" class="avatar" id="avatar">
+                <span class="avatar-status" aria-label="Онлайн сейчас"></span>
             </div>
             
             <!-- Имя пользователя -->
             <h1 class="username">Deseara</h1>
             <p class="location">Russia 🇷🇺</p>
-            <p class="bio">Developer & Furry enthusiast</p>
+
+            <p class="bio">Являюсь Senior Furry Developer</p>
+
+            <div class="bio-details" aria-label="Основные направления работы">
+                <span>⚙️ Telegram боты & софты на Python</span>
+                <span>🛰️ Автоматизация развёртываний</span>
+                <span>👓 Python & Furry Developer</span>
+            </div>
             
             <!-- Кнопки ссылок -->
             <div class="links">
@@ -62,31 +68,40 @@
                     GITHUB
                 </a>
             </div>
-        </div>
-    </div>
 
-    <!-- Модальное окно игры Snake -->
-    <div class="game-modal" id="gameModal">
-        <div class="game-content">
-            <div class="game-header">
-                <h2>🐍 Snake Game</h2>
-                <button class="game-close" id="gameClose">✕</button>
-            </div>
-            <div class="game-score">Счет: <span id="score">0</span></div>
-            <canvas id="gameCanvas" width="400" height="400"></canvas>
-            
-            <!-- Виртуальная клавиатура -->
-            <div class="virtual-keyboard" id="virtualKeyboard">
-                <button data-key="up">↑</button>
-                <button data-key="left">←</button>
-                <button data-key="right">→</button>
-                <button data-key="down">↓</button>
-            </div>
-            
-            <div class="game-controls">
-                <p>Используй стрелки или кнопки для управления</p>
-                <button class="game-restart" id="restartGame">Начать заново</button>
-            </div>
+            <section class="projects-section" aria-label="Личные проекты">
+                <div class="section-heading">
+                    <div class="section-pill">Личные проекты</div>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-badge">Python · Telegram</div>
+                        <h3>D-modules</h3>
+                        <p>Набор кастомных модулей для Telegram userbot, упрощающий автоматизацию чатов на Heroku.</p>
+                        <ul class="project-highlights">
+                            <li>Команды модерации и автоспама без перезапуска.</li>
+                            <li>Модульная система загрузки расширений.</li>
+                        </ul>
+                        <a href="https://github.com/Deseara/D-modules" class="project-link" target="_blank" rel="noopener noreferrer">
+                            Смотреть на GitHub <span aria-hidden="true">↗</span>
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-badge">Frontend · WebGL</div>
+                        <h3>deseara.github.io</h3>
+                        <p>Мой сайт-визитка с Particles.js, тёмной/светлой темой и множеством микроанимаций.</p>
+                        <ul class="project-highlights">
+                            <li>Темизация, конфетти и интерактивные чипы.</li>
+                            <li>Стабильная разметка без лишних скриптов.</li>
+                        </ul>
+                        <a href="https://github.com/Deseara/deseara.github.io" class="project-link" target="_blank" rel="noopener noreferrer">
+                            Исходный код сайта <span aria-hidden="true">↗</span>
+                        </a>
+                    </article>
+                </div>
+            </section>
         </div>
     </div>
 

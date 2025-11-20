@@ -3,108 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deseara - Links</title>
-    <meta name="description" content="Developer & Furry enthusiast from Russia">
+    <title>deseara — nothing's new</title>
+    <meta name="description" content="deseara · разработчик Telegram-ботов и автоматизаций с собственным стилем.">
+    <link rel="icon" type="image/png" href="image.png" sizes="256x256">
+    <link rel="apple-touch-icon" href="image.png">
+    <link rel="preload" href="background.jpg" as="image">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <!-- Particles.js фон -->
-    <div id="particles-js"></div>
-    
-    <!-- Кнопка смены темы -->
-    <button class="theme-toggle" id="themeToggle" title="Сменить тему">
-        <svg class="sun-icon" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"/>
-        </svg>
-        <svg class="moon-icon" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
-            <path d="M10 7C10 10.866 13.134 14 17 14C18.9584 14 20.729 13.1957 21.9995 11.8995C22 11.933 22 11.9665 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C12.0335 2 12.067 2 12.1005 2.00049C10.8043 3.27098 10 5.04157 10 7Z"/>
-        </svg>
-    </button>
-    
-    <!-- Экран загрузки -->
-    <div class="loader-wrapper" id="loader">
-        <div class="loader">
-            <div class="spinner"></div>
-            <p class="loader-text">Loading...</p>
-        </div>
+    <div class="background-layer" aria-hidden="true">
+        <div class="background-image"></div>
+        <div class="background-overlay"></div>
     </div>
-    
-    <div class="background-overlay"></div>
-    
-    <div class="container" id="content">
-        <div class="card">
-            <!-- Аватарка -->
-            <div class="avatar-container">
-                <img src="avatar.jpg" alt="Avatar" class="avatar" id="avatar">
-                <span class="avatar-status" aria-label="Онлайн сейчас"></span>
-            </div>
-            
-            <!-- Имя пользователя -->
-            <h1 class="username">Deseara</h1>
-            <p class="location">Russia 🇷🇺</p>
 
-            <p class="bio">Являюсь Senior Furry Developer</p>
+    <header class="site-header">
+        <div class="logo" aria-label="Домашняя секция">
+            deseara<span></span>
+        </div>
+        <nav class="site-nav" aria-label="Основная навигация">
+            <button class="nav-link is-active" data-target="home">home</button>
+            <button class="nav-link" data-target="projects">projects</button>
+            <button class="nav-link" data-target="contact">contact</button>
+        </nav>
+    </header>
 
-            <div class="bio-details" aria-label="Основные направления работы">
-                <span>⚙️ Telegram боты & софты на Python</span>
-                <span>🛰️ Автоматизация развёртываний</span>
-                <span>👓 Python & Furry Developer</span>
-            </div>
-            
-            <!-- Кнопки ссылок -->
-            <div class="links">
-                <a href="https://t.me/deseara" class="link-button telegram" target="_blank">
-                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"/>
-                    </svg>
-                    TELEGRAM
-                </a>
-                
-                <a href="https://github.com/Deseara" class="link-button github" target="_blank">
-                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                    GITHUB
-                </a>
-            </div>
-
-            <section class="projects-section" aria-label="Личные проекты">
-                <div class="section-heading">
-                    <div class="section-pill">Личные проекты</div>
+    <main>
+        <section class="page-section is-active" data-section="home">
+            <section class="hero" id="home">
+                <p class="eyebrow">Manul forever</p>
+                <h1>Я Deseara — делаю тг-ботов и другие полезные штуки.</h1>
+                <p class="hero-copy">
+                    Люблю Telegram API, Python‑стек и микросервисы, но ещё больше люблю, когда 
+                    всё работает без суеты. Иногда делаю фронт без фреймворков,
+                    просто чтобы напомнить себе, что я живой человек.
+                </p>
+                <div class="cta-group">
+                    <a class="cta primary" href="https://t.me/deseara" target="_blank" rel="noopener noreferrer">написать в telegram</a>
+                    <a class="cta ghost" href="https://github.com/Deseara" target="_blank" rel="noopener noreferrer">github</a>
                 </div>
+                <div class="status-chip" data-rotator>
+                    сейчас в онлайне · готов к новым пет-проектам
+                </div>
+            </section>
 
+            <section class="vibes" id="about">
+                <div class="vibes-card">
+                    <figure class="avatar-frame">
+                        <img src="avatar.jpg" alt="Десара" loading="lazy">
+                    </figure>
+                    <div>
+                        <h2>about me</h2>
+                        <p>
+                            Привет! я тот самый гавнокодер который делает гавнокоды.
+                        </p>
+                        <ul class="tag-list">
+                            <li>Python / FastAPI</li>
+                            <li>Telegram API</li>
+                            <li>JavaScript -minimalist</li>
+                            <li>UI experiments</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="page-section" data-section="projects">
+            <section class="projects-panel" aria-label="Личные проекты">
+                <div class="panel-header">
+                    <p class="eyebrow">projects</p>
+                    <h2>Показываю только живое и полезное.</h2>
+                </div>
                 <div class="projects-grid">
                     <article class="project-card">
-                        <div class="project-badge">Python · Telegram</div>
+                        <div class="project-meta">Python · Telegram</div>
                         <h3>D-modules</h3>
-                        <p>Набор кастомных модулей для Telegram userbot, упрощающий автоматизацию чатов на Heroku.</p>
-                        <ul class="project-highlights">
-                            <li>Команды модерации и автоспама без перезапуска.</li>
-                            <li>Модульная система загрузки расширений.</li>
+                        <p>Мой набор костылей и плагинов для userbot’ов: модерирую чаты и спамлю мемами без перезапуска.</p>
+                        <ul>
+                            <li>горячие обновления прямо в живом чате</li>
+                            <li>ручные тумблеры и мини-логгер</li>
                         </ul>
-                        <a href="https://github.com/Deseara/D-modules" class="project-link" target="_blank" rel="noopener noreferrer">
-                            Смотреть на GitHub <span aria-hidden="true">↗</span>
-                        </a>
+                        <a href="https://github.com/Deseara/D-modules" target="_blank" rel="noopener noreferrer">смотреть на github ↗</a>
                     </article>
 
                     <article class="project-card">
-                        <div class="project-badge">Frontend · WebGL</div>
+                        <div class="project-meta">Frontend · Motion</div>
                         <h3>deseara.github.io</h3>
-                        <p>Мой сайт-визитка с Particles.js, тёмной/светлой темой и множеством микроанимаций.</p>
-                        <ul class="project-highlights">
-                            <li>Темизация, конфетти и интерактивные чипы.</li>
-                            <li>Стабильная разметка без лишних скриптов.</li>
+                        <p>Этот сайт. Собран на чистом HTML/CSS/JS, без тяжёлых UI-китов и с кучей ручных правок в 3 ночи.</p>
+                        <ul>
+                            <li>адаптивный фон с параллаксом и шумом</li>
+                            <li>ручная типографика + кастомные состояния</li>
                         </ul>
-                        <a href="https://github.com/Deseara/deseara.github.io" class="project-link" target="_blank" rel="noopener noreferrer">
-                            Исходный код сайта <span aria-hidden="true">↗</span>
-                        </a>
+                        <a href="https://github.com/Deseara/deseara.github.io" target="_blank" rel="noopener noreferrer">исходники ↗</a>
                     </article>
                 </div>
             </section>
-        </div>
-    </div>
+        </section>
 
-    <script src="script.js"></script>
+        <section class="page-section" data-section="contact">
+            <section class="contact-panel">
+                <div class="panel-header">
+                    <p class="eyebrow">contact</p>
+                    <h2>Писать по всем вопросам и предложениям</h2>
+                </div>
+                <div class="contact-cards">
+                    <a class="contact-card" href="https://t.me/deseara" target="_blank" rel="noopener noreferrer">
+                        <p class="label">telegram</p>
+                        <p class="value">@deseara</p>
+                    </a>
+                    <a class="contact-card" href="mailto:hi@deseara.dev">
+                        <p class="label">email</p>
+                        <p class="value">deseara@nigga.cc</p>
+                    </a>
+                    <a class="contact-card" href="https://github.com/Deseara" target="_blank" rel="noopener noreferrer">
+                        <p class="label">github</p>
+                        <p class="value">github.com/Deseara</p>
+                    </a>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <small>© <span id="year"></span> deseara · manul forever</small>
+    </footer>
 </body>
 </html>
